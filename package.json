@@ -1,0 +1,24 @@
+{
+  "name": "desafio-hcx",
+  "version": "1.0.0",
+  "description": "Desafio de automação web e API com Cypress, Cucumber e JavaScript",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run",
+    "test:login": "cypress run --spec \"Teste/cenarios/login/login.feature\"",
+    "test:busca": "cypress run --spec \"Teste/cenarios/busca/busca.feature\"",
+    "test:carrinho": "cypress run --spec \"Teste/cenarios/carrinho/carrinho.feature\"",
+    "test:checkout": "cypress run --spec \"Teste/cenarios/checkout/checkout.feature\"",
+    "test:api": "cypress run --spec \"Teste/cenarios/api/api.feature\""
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
+    "cypress": "^13.17.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": [
+      "Teste/testes/**/*.js"
+    ]
+  }
+}

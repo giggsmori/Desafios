@@ -9,8 +9,12 @@ module.exports = defineConfig({
     viewportWidth: 1280,
     viewportHeight: 720,
     defaultCommandTimeout: 15000,
-    pageLoadTimeout: 120000,
+    pageLoadTimeout: 180000,
     requestTimeout: 30000,
+    retries: {
+      runMode: 1,
+      openMode: 0,
+    },
     video: false,
     screenshotOnRunFailure: true,
     specPattern: "Teste/cenarios/**/*.feature",

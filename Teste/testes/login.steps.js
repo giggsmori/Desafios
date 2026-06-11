@@ -21,15 +21,10 @@ When("clico no botão de login", () => {
 });
 
 Then("devo estar logado com sucesso", () => {
-  cy.contains("Logged in as", { timeout: 20000 }).should("be.visible");
+  cy.assertLoggedIn();
 });
 
 Then("devo ver mensagem de erro de login", () => {
   cy.contains("Your email or password is incorrect!").should("be.visible");
   cy.contains("Logged in as").should("not.exist");
-});
-
-Given("que estou logado com {string} e senha {string}", (email, password) => {
-  cy.login(email, password);
-  cy.contains("Logged in as", { timeout: 20000 }).should("be.visible");
 });

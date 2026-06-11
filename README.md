@@ -86,7 +86,9 @@ Cada desafio possui ao menos **um cenário positivo** e **um cenário negativo**
 | **Login** | Login válido (`teste2021` / `teste2024`) | Credenciais incorretas |
 | **Busca** | Buscar produto existente (`Blue Top`) | Buscar produto inexistente |
 | **Adicionar ao carrinho** | Adicionar produto com sucesso | Carrinho vazio sem produtos |
-| **Validar produto no carrinho** | Produto adicionado listado no checkout | Produto não adicionado ausente no checkout |
+| **Validar produto no carrinho** | Validar produto no checkout e finalizar compra | Produto não adicionado ausente no checkout |
+
+> **Pré-requisito:** As features **Busca**, **Carrinho** e **Checkout** exigem login antes da execução dos demais passos.
 
 ### API - Trello
 
